@@ -1,0 +1,223 @@
+<div class="row flex-lg-row-reverse align-items-center  g-5 py-4 mb-4">
+    <div class="col-12 col-lg-4">
+        <img src="/img/group1.png" class="d-block mx-lg-auto img-fluid" Loading="lazy" alt="PLANTS">
+    </div>
+    <div class="col-12 col-lg-8">
+        <h1 class="display-5 fw-bold mb-3">ARE YOU A <span style="color: green;">PLANT</span>?</h1>
+        <p class="lead">Because I can't resist shopping for you on this website and reading all about you on the blog.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/knowabout" class="btn btn-primary btn-dark btn-lg px-4 me-md-2">Know About</a>
+            <a href="/shopnow" class="btn btn-succes-secondary btn-lg px-4 me-md-2">Shop Now!!!</a>
+        </div>
+    </div>
+</div>
+
+ <!-- Most searched start -->
+
+ <div class="d-flex mb-2 align-items-center">
+    <h2>Most Searched</h2>
+    <!-- <a href="/mostsearch/#" class="col text-center category__link"></a> -->
+</div>
+<div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
+    
+    <% if(searches !='') { %>
+        <% searches.forEach(function(searches, index) {  %>
+            <a href="/MostSearched/<%- searches.name %>" class="col text-center category__link">
+                <div class="category__img shadow width=11 height=12 ">
+                    <img src="img/<%- searches.image %>"  alt="<%- searches.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%- searches.name %></div>
+            </a>
+        <% }) %>
+    <% } %>
+<!-- 
+    <a href="#" class="col text-center category__link">
+        <div class="category__img shadow width=11 height=12 ">
+            <img src="img/rectangle2.jpg"  alt="Night Star" loading="lazy">
+        </div>
+        <div class="pt-1">Night Star</div>
+    </a>
+
+    <a href="#" class="col text-center category__link">
+        <div class="category__img shadow width=11 height=12 ">
+            <img src="img/rectangle2.jpg"  alt="Night Star" loading="lazy">
+        </div>
+        <div class="pt-1">Night Star</div>
+    </a>
+
+    <a href="#" class="col text-center category__link">
+        <div class="category__img shadow width=11 height=12 ">
+            <img src="img/rectangle2.jpg"  alt="Night Star" loading="lazy">
+        </div>
+        <div class="pt-1">Night Star</div>
+    </a>
+
+    <a href="#" class="col text-center category__link">
+        <div class="category__img shadow width=11 height=12 ">
+            <img src="img/rectangle2.jpg"  alt="Night Star" loading="lazy">
+        </div>
+        <div class="pt-1">Night Star</div>
+    </a> -->
+
+    <a href="/MostSearched" class="col text-center category__link">
+        <div class="category__img shadow width=11 height=12 ">
+            <img src="img/rectangle4.png"  alt="View all" loading="lazy">
+        </div>
+        <div class="pt-1">View all</div>
+    </a>
+</div>
+<!-- Most searched end-->
+
+<!-- trending start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Trending Blogs!</h2>
+        <a href="/viewall" class="ml-auto">View More</a>
+    </div>
+ 
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+
+        <% if(plant!=''){ %>
+            <% plant.latest.forEach(function(trending, index) {  %>
+                <a href="/trending/<%= trending._id %>" class="col text-center category__link">
+                    <div class="category__img category__img--large shadow">
+                        <img src="img/<%= trending.image %>"  alt="<%= trending.name %>" loading="lazy">
+                    </div>
+                    <div class="pt-1"><%= trending.name %></div>
+                </a>
+            <% }) %>
+        <% } %>
+    </div>
+</section>
+        
+
+        <!-- <a href="/holomon/#" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/rectangle8.png"  alt="Holomon" loading="lazy">
+            </div>
+            <div class="pt-1">Holomon</div>
+        </a>
+
+        <a href="/holomon/#" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/rectangle8.png"  alt="Holomon" loading="lazy">
+            </div>
+            <div class="pt-1">Holomon</div>
+        </a>
+
+        <a href="/holomon/#" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/rectangle8.png"  alt="Holomon" loading="lazy">
+            </div>
+            <div class="pt-1">Holomon</div>
+        </a>
+
+        <a href="/holomon/#" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/rectangle8.png"  alt="Holomon" loading="lazy">
+            </div>
+            <div class="pt-1">Holomon</div>
+        </a> -->
+
+
+<!-- trending end -->
+
+<!-- Based on cure start -->
+<!-- 
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Based On Cure</h2>
+        <a href="/viewall" class="ml-auto">View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <a href="/coldandcough" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse1.png" alt="cold and cough" loading="lazy">
+            </div>
+        </a>
+
+        <a href="/coldandcough" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse1.png" alt="cold and cough" loading="lazy">
+            </div>
+        </a>
+
+        <a href="/coldandcough" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse1.png" alt="cold and cough" loading="lazy">
+            </div>
+        </a>
+
+        <a href="/coldandcough" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse1.png" alt="cold and cough" loading="lazy">
+            </div>
+        </a>
+
+        <a href="/coldandcough" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse1.png" class="inner-img" alt="cold and cough" loading="lazy">
+            </div>
+        </a>
+    </div>
+</section> -->
+
+<!-- Based on cure end -->
+
+
+<!-- Top sellers start -->
+<!-- 
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Top Sellers</h2>
+        <a href="/viewall" class="ml-auto">View More</a>
+    </div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <a href="/janaman" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse11.png" alt="Janaman" loading="lazy">
+            </div>
+            <div class="pt-1">Janaman</div>
+        </a>
+
+        <a href="/janaman" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse11.png" alt="Janaman" loading="lazy">
+            </div>
+            <div class="pt-1">Janaman</div>
+        </a>
+
+        <a href="/janaman" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse11.png" alt="Janaman" loading="lazy">
+            </div>
+            <div class="pt-1">Janaman</div>
+        </a>
+
+        <a href="/janaman" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse11.png" alt="Janaman" loading="lazy">
+            </div>
+            <div class="pt-1">Janaman</div>
+        </a>
+
+        <a href="/janaman" class="col text-center category__link">
+            <div class="category__img category__image--large shadow">
+                <img src="img/ellipse11.png" alt="Janaman" loading="lazy">
+            </div>
+            <div class="pt-1">Janaman</div>
+        </a>
+    </div>
+</section> -->
+
+<!-- Top sellers end -->
+
+<!--subscribe start -->
+
+<section class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold color">Subscribe Plankton For Updates</h1>
+        <a href="/subscribe" class="btn btn-primary btn-lg">Subscribe</a>
+</section>
+<!--subscribe end -->

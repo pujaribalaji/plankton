@@ -1,0 +1,34 @@
+<% if(Trending !=null) { %>
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%- Trending.name%></li>
+    </ol>
+ </nav>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="/img/<%-Trending.image %>" class="img-fluid sticky-top" alt="<%-Trending.name%>" loading="lazy">
+    </div>
+    
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-12"><h1><%-Trending.name%></h1></div>
+            <div class="col-12 mb-4"><i class="bi bi-tag"></i>Trending!!!</div>
+            <div class="col-12" style="white-space: pre-line;">
+                <%-Trending.description%> <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem repellendus reprehenderit, expedita facilis, est recusandae rerum illo sit repudiandae eveniet molestiae adipisci ab maxime facere harum nisi ratione dignissimos aliquam?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt cumque nostrum numquam sit vero, magni, odio minus necessitatibus eos atque quos debitis illo vitae dolore eum nesciunt excepturi? Asperiores, ratione!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<% } %>
